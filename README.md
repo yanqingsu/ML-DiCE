@@ -5,8 +5,8 @@ ML-DiCE
 </h1>
 <br>
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7874413.svg)](https://doi.org/10.5281/zenodo.7874413)
-[![PyPI](https://img.shields.io/pypi/v/vaspgibbs)](https://pypi.org/project/VaspGibbs/)
+[![DOI](https://zenodo.org/badge/DOI/update_soon.svg)](https://doi.org/to/be/updated)
+[![PyPI](https://img.shields.io/pypi/v/mldice)](https://pypi.org/project/VaspGibbs/)
 
 ## Installation
 
