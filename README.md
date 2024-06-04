@@ -58,7 +58,7 @@ All outputs can be found in the ML-DiCE.md file. It contains the following infor
 ## Citation
 
 ```
-@software{therrien2023vaspgibbs,
+@software{mldice,
   author       = {Kulathuvayal Arjun S., Su Yanqing },
   title        = {{Elemental Diffusion Coefficient Prediction in Conventional Alloys using Machine Learning}},
   month        = june,
