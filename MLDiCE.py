@@ -25,7 +25,7 @@ def main():
 
     if argCheck(args):
         if args.estimator is None or args.estimator == "RF":
-            print(clr.BLUE + "Info!" + clr.GREEN +" Random Forest is chosen as the default estimator. This can be changed to MLPREgressor as '-e' or '--estimator'" + clr.END)
+            print(clr.BLUE + "Info!" + clr.GREEN +" Random Forest is chosen as the default estimator. This can be changed to MLPRegressor as '-e' or '--estimator'" + clr.END)
         print("ok")
 
     else:
