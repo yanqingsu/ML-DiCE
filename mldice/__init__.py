@@ -3,6 +3,7 @@ import pkg_resources
 
 from .featurization import featurize_de, featurize_de
 from .training import rf_training, dnn_traning
+from .utils import argCheck, clr
 from importlib.metadata import version
 
 #__version__ = pkg_resources.require("vaspgibbs")[0].version

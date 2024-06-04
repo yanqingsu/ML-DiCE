@@ -1,6 +1,7 @@
 # Author: Arjun S Kulathuvayal. Intellectual property. Copyright strictly restricted
 import numpy as np
 import pandas as pd
+import warnings
 import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn.covariance import EmpiricalCovariance
@@ -13,6 +14,13 @@ font = {'family': 'serif',
 plt.rc('font', **font)
 plt.rcParams["figure.figsize"] = [8, 6]
 
+
+class clr:
+    RED = '\033[91m'
+    GREEN = '\033[92m'
+    YELLOW = '\033[93m'
+    BLUE = '\033[94m'
+    END = '\033[0m'
 
 
 def decompress(file):
@@ -45,5 +53,20 @@ def correlationHeatmap(df, title="", label=False):
     plt.close()
 
 
-if __name__ == "__main__":
-    pass
+def argCheck(input_params):
+    try:
+        if input_params.DE is None or input_params.DE == "X":
+            raise ValueError(clr.RED + "Error!!!" + clr.GREEN + " Enter diffusing element as '-de' or '--diffusingElement' | required and cannot be empty." + clr.END)
+        elif input_params.DM is None or input_params.DM == "A50B25C15D10":
+            raise ValueError(clr.RED + "Error!!!" + clr.GREEN + " Enter diffusion medium as '-dm' or '--diffusionMedium' | required and cannot be empty." + clr.END)
+        elif input_params.Temperature is None or input_params.Temperature == 500:
+            raise ValueError(clr.RED + "Warning!!" + clr.GREEN + " Enter Temperature as '-T' or '--Temperature' | required and cannot be empty." + clr.END)
+        elif input_params.Temperature > 2000 or input_params.Temperature < 500:
+            print(clr.YELLOW + "Warning!!" + clr.GREEN + " Model performs optimally for the temperature range of 500 to 2000 K" + clr.END)
+        return True
+    except ValueError as err:
+        print(err)
+    except UserWarning as wa:
+        print(wa)
+    return False
+

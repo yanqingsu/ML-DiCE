@@ -3,9 +3,9 @@
 ## Input Parameters:
 |  Input Parameters   |    Value    |
 |:-----------:|:-----------:|
- |  Diffusing Element | He  | 
- |  Diffusion Medium | Ni50Fe50  | 
- |  Temperature | 500.0  | 
- |  Estimator | RF  | 
+ |  DE | SESE  | 
+ |  DM | hfuf  | 
+ |  Temperature | 10000.0  | 
+ |  estimator | RF  | 
  |  version | False  | 
 
