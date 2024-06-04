@@ -3,9 +3,9 @@
 ## Input Parameters:
 |  Input Parameters   |    Value    |
 |:-----------:|:-----------:|
- |  Diffusing Element | H  | 
- |  Diffusion Medium | Cu50NI78Gd11  | 
- |  Temperature | 700.0  | 
+ |  Diffusing Element | He  | 
+ |  Diffusion Medium | Ni50Fe50  | 
+ |  Temperature | 500.0  | 
  |  Estimator | RF  | 
  |  version | False  | 
 
