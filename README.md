@@ -1,5 +1,5 @@
 <h1 align="center">
-<img src="https://raw.githubusercontent.com/skvarjun/ML-DiCE/art/logo.svg" height="130">
+<img src="https://www.mzlab.co.in/frontend/img/team/logo.svg" height="130">
 
 ML-DiCE
 </h1>
