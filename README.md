@@ -1,7 +1,7 @@
 <h1 align="center">
 <img src="https://www.mzlab.co.in/frontend/img/team/logo.svg" height="130">
 
-ML-DiCE
+ML-DiCE | Machine Learned Diffusion Coefficient Estimator
 </h1>
 <br>
 
