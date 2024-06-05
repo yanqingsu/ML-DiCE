@@ -94,7 +94,6 @@ def element_test(species):
                     'Ds', 'Rg',
                     'Cn', 'Nh', 'Fl', 'Mc', 'Lv', 'Ts', 'Og']
     non_atomic_symbols = [element for element in elements if element not in all_elements]
-
     return non_atomic_symbols
 
 

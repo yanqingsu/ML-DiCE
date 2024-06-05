@@ -1,9 +1,8 @@
 # Author: Arjun S Kulathuvayal. Intellectual property. Copyright strictly restricted
 import pkg_resources
 
-from .featurization import ModelTrainer
+from .featurization import ModelTester
 from .validation import validator, entry_err
-from .training import rf_training, dnn_traning
 from .utils import argCheck, clr
 from importlib.metadata import version
 
