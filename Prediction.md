@@ -3,9 +3,10 @@
 ## Input Parameters:
 |  Input Parameters   |    Value    |
 |:-----------:|:-----------:|
- |  DE | SESE  | 
- |  DM | hfuf  | 
- |  Temperature | 10000.0  | 
+ |  DE | H  | 
+ |  DM | Fe20Se40  | 
+ |  temperature | 1000.5  | 
+ |  mechanism | self  | 
  |  estimator | RF  | 
  |  version | False  | 
 

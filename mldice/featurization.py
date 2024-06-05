@@ -6,7 +6,8 @@ import os, re
 from matminer.featurizers import composition as cf
 from matminer.featurizers.base import MultipleFeaturizer
 from matminer.featurizers.conversions import StrToComposition
-import mendeleev
+
+
 
 class Featurization:
     def __init__(self):
@@ -14,9 +15,5 @@ class Featurization:
         self.DE =3
 
 
-def is_valid_atomic_symbol(symbol):
-    try:
-        element = mendeleev.element(symbol)
-        return True
-    except ValueError:
-        return False
+
+
