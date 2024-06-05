@@ -3,9 +3,9 @@
 ## Input Parameters:
 |  Input Parameters   |    Value    |
 |:-----------:|:-----------:|
- |  DE | H  | 
- |  DM | Fe20Se40  | 
- |  temperature | 1000.5  | 
+ |  DE | Fe  | 
+ |  DM | Ni50Fe30Cu20  | 
+ |  temperature | 200.0  | 
  |  mechanism | self  | 
  |  estimator | RF  | 
  |  version | False  | 

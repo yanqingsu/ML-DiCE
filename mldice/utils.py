@@ -60,10 +60,10 @@ def argCheck(input_params):
         elif input_params.DM is None or input_params.DM == "A50B25C15D10":
             raise ValueError(clr.RED + "Error!!!" + clr.GREEN + " Enter diffusion medium as '-dm' or '--diffusionMedium' | required and cannot be empty." + clr.END)
         elif input_params.temperature is None or input_params.temperature == 500:
-            raise ValueError(clr.RED + "Warning!!" + clr.GREEN + " Enter Temperature as '-T' or '--Temperature' | required and cannot be empty." + clr.END)
+            raise ValueError(clr.RED + "Error!!" + clr.GREEN + " Enter Temperature as '-T' or '--Temperature' | required and cannot be empty." + clr.END)
         elif input_params.temperature > 2000 or input_params.temperature < 500:
             print(clr.YELLOW + "Warning!!" + clr.GREEN + " Model performs optimally for the temperature range of 500 to 2000 K" + clr.END)
-        elif input_params.DM is None or input_params.DM == "A50B25C15D10":
+        elif input_params.estimator is None or input_params.estimator == "":
             raise ValueError(clr.RED + "Error!!!" + clr.GREEN + " Enter mechanism of diffusion as '-m' or '--mechanism' | required and cannot be empty." + clr.END)
         return True
     except ValueError as err:

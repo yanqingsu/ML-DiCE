@@ -19,7 +19,7 @@ class InputValidator:
     def validate_de(self):
         """Validate de: should be a non-empty string."""
         if not isinstance(self.de, str) or not self.de:
-            raise ValidationError("de must be a non-empty string")
+            raise ValidationError("Enter diffusing element as '-de' or '--diffusingMedium'")
         elif is_valid_atomic_symbol(self.de):
             pass
         else:
@@ -105,6 +105,32 @@ def validator(input_params):
         try:
             validator = InputValidator(*params)
             validator.validate_all()
-            print(clr.BLUE + "Info " + clr.GREEN + "Input parameters are successfully validated" + clr.END)
+            print(clr.BLUE + "Info! " + clr.GREEN + "Input parameters are successfully validated" + clr.END)
+            return True
         except ValidationError as e:
             print(clr.RED + "Validation failed!!! " + clr.GREEN + str(e))
+
+
+def namespace_to_list(namespace):
+    args_list, args_val = [], []
+    for arg, value in vars(namespace).items():
+        if isinstance(value, bool):
+            if value:
+                args_list.append(f"--{arg}")
+        else:
+            args_val.append(f"--{arg}")
+            args_list.append(str(value))
+
+    return dict(zip(args_val, args_list))
+
+
+def entry_err(input_data):
+    if type == 0 or 1:
+        x = namespace_to_list(input_data)
+        empty_keys = []
+        for key, value in x.items():
+            if not value:
+                empty_keys.append(key)
+        statement = f"Input parameter {', '.join(map(str, empty_keys))} are not provided."
+        return statement
+
