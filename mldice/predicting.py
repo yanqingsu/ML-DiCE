@@ -43,8 +43,8 @@ class Predictor:
                 return False
         else:
             if self.d_mode == 'impurity' or self.d_mode == 'self':
-                print(clr.YELLOW + "Warning!!" + clr.GREEN + "For impure alloy medium, training has done with MLPregressor")
-                print(clr.YELLOW + "Warning!!" + clr.GREEN + "Redirecting to predicting with neural network model")
+                print(clr.YELLOW + "Warning!!" + clr.GREEN + " For impure metalic medium, training has done with MLPregressor")
+                print(clr.YELLOW + "Warning!!" + clr.GREEN + " Redirecting to predicting with neural network model")
                 result = self.DNN_pred()
                 return result
             elif self.d_mode == 'chemical':

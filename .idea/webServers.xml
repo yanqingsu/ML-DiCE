@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="f4ffbe07-f2b7-40f6-815a-eb422109e23d" name="CHPC">
+        <fileTransfer rootFolder="/uufs/chpc.utah.edu/common/home/ysu-group1/arjun" accessType="SFTP" host="notchpeak2.chpc.utah.edu" port="22" sshConfigId="4f59cd2d-d206-4254-8e9b-965d09f4730a" sshConfig="u6037128@notchpeak2.chpc.utah.edu:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

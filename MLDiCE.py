@@ -33,7 +33,6 @@ def main():
         if validator(args):
             trainer = ModelTester(args, project_root)
             predicted_D = trainer.process()
-            print(predicted_D)
         else:
             print(f"* {entry_err(args)}", file=vgout)
             return False
