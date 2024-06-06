@@ -6,7 +6,7 @@ ML-DiCE | Machine Learned Diffusion Coefficient Estimator
 <br>
 
 [![DOI](https://zenodo.org/badge/DOI/update_soon.svg)](https://doi.org/to/be/updated)
-[![PyPI](https://img.shields.io/pypi/v/mldice/0.1.9)](https://pypi.org/project/mldice/)
+[![PyPI](https://img.shields.io/pypi/v/mldice/0.2.0)](https://pypi.org/project/mldice/)
 
 ## Installation
 
@@ -29,7 +29,7 @@ In the activated environment, run
 mldice -options
 ```
 
-`ML-DiCE` will featurize your alloy or impure metal and predict diffusion coefficient in m^2/s. The options can be set through following arguments
+`mldice` will featurize your alloy or impure metal and predict diffusion coefficient in m^2/s. The options can be set through following arguments
 
 Use `-de` to specify diffusing element `-dm` to specify diffusion medium. Examples:
 
@@ -41,7 +41,7 @@ Use `-de` to specify diffusing element `-dm` to specify diffusion medium. Exampl
 
 Essentially, the run command shall be as follows:
 ```
-ML-DiCE.py -de [diffusing element] -dm [diffusion medium] -t [temperature] -s [prediction algorithm] -e RF
+mldice -de [diffusing element] -dm [diffusion medium] -t [temperature] -m [diffusion mechanism] -e [algorithm chosen for prediction]
 ```
 
 
