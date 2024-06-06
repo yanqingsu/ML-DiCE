@@ -6,7 +6,7 @@ ML-DiCE | Machine Learned Diffusion Coefficient Estimator
 <br>
 
 [![DOI](https://zenodo.org/badge/DOI/update_soon.svg)](https://doi.org/to/be/updated)
-[![PyPI](https://img.shields.io/pypi/v/mldice)](https://pypi.org/project/VaspGibbs/)
+[![PyPI](https://img.shields.io/pypi/v/mldice/0.1.9)](https://pypi.org/project/mldice/)
 
 ## Installation
 
@@ -15,9 +15,18 @@ pip install mldice
 ```
 ## Usage
 
-In a terminal , run
+Create a conda environment as 
+
 ```
-ML-DiCE -options
+conda create --name myEnv
+```
+Activate the environment created
+```
+conda activate myEnv
+```
+In the activated environment, run
+```
+mldice -options
 ```
 
 `ML-DiCE` will featurize your alloy or impure metal and predict diffusion coefficient in m^2/s. The options can be set through following arguments
@@ -26,17 +35,17 @@ Use `-de` to specify diffusing element `-dm` to specify diffusion medium. Exampl
 
  * `-de Fe` would take iron as diffusing element.
  * `-dm Ni75.5Cu24Co0.5` select Ni75.5Cu24Co0.5 is the diffusion medium where constituent elements expressed as percentage 
- * `-t 500` would select the temperature of diffusion process in Kelvin.
- * `-m self` select self diffusion mechanism
+ * `-t 500` would select the temperature (say, 500K in this case) of diffusion process in Kelvin.
+ * `-m self` select self diffusion mechanism. Mechanisms include self, impurity and chemical modes. 
  * `-e RF` would select Random Forest regression as prediction algorithm. DNN selects neural network based prediction.
 
-Essentially, the run command would be as follows:
+Essentially, the run command shall be as follows:
 ```
 ML-DiCE.py -de [diffusing element] -dm [diffusion medium] -t [temperature] -s [prediction algorithm] -e RF
 ```
 
 
-### Output
+## Output
 
 All outputs can be found in the Prediction.md file. It contains the following information:
 
@@ -71,7 +80,7 @@ All outputs can be found in the Prediction.md file. It contains the following in
 }
 ```
 
-## Under development
+### Under development
 
 *Advanced featurization for alloys:* New featurization schemes are under developing
 

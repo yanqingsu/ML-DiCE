@@ -31,13 +31,15 @@ class Predictor:
                 predict_df = feature_processing(medium_type, self.root, self.d_mode, self.temp, self.de_ftrs, self.dm_ftrs)
                 model = decompress(self.root, self.d_mode, medium_type, algorithm='RF')
                 preds = model.predict(predict_df.to_numpy())
-                return np.exp(-preds)[0]
+                rmse = 1.3141387230737038e-18
+                return np.exp(-preds)[0], rmse
             elif self.d_mode == 'self':
                 medium_type = "IM"
                 predict_df = feature_processing(medium_type, self.root, self.d_mode, self.temp, self.de_ftrs, self.dm_ftrs)
                 model = decompress(self.root, self.d_mode, medium_type, algorithm='RF')
                 preds = model.predict(predict_df.to_numpy())
-                return np.exp(-preds)[0]
+                rmse = 3.17554591570878e-22
+                return np.exp(-preds)[0], rmse
             else:
                 print(clr.YELLOW + "Warning!!" + clr.GREEN + "For impure metalic medium, presently we have trained impurity and self diffusion mechanism models. MOre diffusion mechanisms will be available in future")
                 return False
@@ -52,7 +54,8 @@ class Predictor:
                 predict_df = feature_processing(medium_type, self.root, self.d_mode, self.temp, self.de_ftrs, self.dm_ftrs)
                 model = decompress(self.root, self.d_mode, medium_type, algorithm='RF')
                 preds = model.predict(predict_df.to_numpy())
-                return np.exp(-preds)[0]
+                rmse = 6.822703587480483e-22
+                return np.exp(-preds)[0], rmse
             else:
                 print(clr.YELLOW + "Error!!" + clr.GREEN + "For impure metalic medium, presently we have trained impurity, self, amd chemical diffusion mechanism models. MOre diffusion mechanisms will be available in future")
                 return False
@@ -66,7 +69,8 @@ class Predictor:
                 scaled_pr_df = StandardScaler().fit_transform(predict_df)
                 model = decompress(self.root, self.d_mode, medium_type, algorithm='DNN')
                 preds = model.predict(scaled_pr_df)
-                return np.exp(-preds)[0]
+                rmse = 7.180e-16
+                return np.exp(-preds)[0], rmse
             elif self.d_mode == 'self':
                 medium_type = "IM"
                 predict_df = feature_processing(medium_type, self.root, self.d_mode, self.temp, self.de_ftrs, self.dm_ftrs)
@@ -74,7 +78,8 @@ class Predictor:
                 scaled_pr_df = StandardScaler().fit_transform(predict_df)
                 model = decompress(self.root, self.d_mode, medium_type, algorithm='DNN')
                 preds = model.predict(scaled_pr_df)
-                return np.exp(-preds)[0]
+                rmse = 4.775e-21
+                return np.exp(-preds)[0], rmse
             else:
                 print(clr.YELLOW + "Warning!!" + clr.GREEN + "For impure metalic medium, presently we have trained impurity and self diffusion mechanism models. More diffusion mechanisms will be available in future")
                 return False
@@ -86,7 +91,8 @@ class Predictor:
                 scaled_pr_df = StandardScaler().fit_transform(predict_df)
                 model = decompress(self.root, self.d_mode, medium_type, algorithm='DNN')
                 preds = model.predict(scaled_pr_df)
-                return np.exp(-preds)[0]
+                rmse = 1.051e-17
+                return np.exp(-preds)[0], rmse
             elif self.d_mode == 'self':
                 medium_type = "MCA"
                 predict_df = feature_processing(medium_type, self.root, self.d_mode, self.temp, self.de_ftrs, self.dm_ftrs)
@@ -94,7 +100,8 @@ class Predictor:
                 scaled_pr_df = StandardScaler().fit_transform(predict_df)
                 model = decompress(self.root, self.d_mode, medium_type, algorithm='DNN')
                 preds = model.predict(scaled_pr_df)
-                return np.exp(-preds)[0]
+                rmse = 3.57e-22
+                return np.exp(-preds)[0], rmse
             elif self.d_mode == 'chemical':
                 medium_type = "MCA"
                 predict_df = feature_processing(medium_type, self.root, self.d_mode, self.temp, self.de_ftrs, self.dm_ftrs)
@@ -102,7 +109,8 @@ class Predictor:
                 predict_df = predict_df.to_numpy()
                 scaled_pr_df = StandardScaler().fit_transform(predict_df)
                 preds = model.predict(scaled_pr_df)
-                return np.exp(-preds)[0]
+                rmse = 3.840e-22
+                return np.exp(-preds)[0], rmse
             else:
                 print(clr.YELLOW + "Error!!" + clr.GREEN + "For impure metalic medium, presently we have trained impurity, self, amd chemical diffusion mechanism models. More diffusion mechanisms will be available in future")
                 return False

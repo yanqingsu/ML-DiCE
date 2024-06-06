@@ -34,7 +34,7 @@ def MLDiCE():
 
         if validator(args):
             trainer = ModelTester(args, project_root)
-            predicted_D = trainer.process()
+            predicted_D, rmse = trainer.process()
         else:
             print(f"* {entry_err(args)}", file=vgout)
             return False
@@ -52,11 +52,11 @@ def MLDiCE():
         print("|  Predicted Parameters   |    Value    |", file=vgout)
         print("|:-----------:|:-----------:|", file=vgout)
         print(" | ", f"Predicted {args.mechanism} diffusion coefficient" , "|", f"{predicted_D:.4e} m^2/s", " | ", file=vgout)
-        print(" | ", "Mean squared error", "|", f"{0} m^2/s", " | ", file=vgout)
+        print(" | ", "Mean squared error", "|", f"{rmse} m^2/s", " | ", file=vgout)
 
     print(file=vgout, flush=True)
 
-    print(clr.BLUE + "RESULTS!!!" + clr.GREEN + f" Predicted {args.mechanism} diffusion coefficient of {args.DE} in {args.DM} is {predicted_D:.4e} m^2/s with MSE of " + clr.END)
+    print(clr.BLUE + "RESULTS!!!" + clr.GREEN + f" Predicted {args.mechanism} diffusion coefficient of {args.DE} in {args.DM} is {predicted_D:.4e} m^2/s with MSE of {rmse}" + clr.END)
 
 
 MLDiCE()
