@@ -24,6 +24,10 @@ Activate the environment created
 ```
 conda activate myEnv
 ```
+Install ML-DiCE
+```
+pip install mldice
+```
 In the activated environment, run
 ```
 mldice -options
