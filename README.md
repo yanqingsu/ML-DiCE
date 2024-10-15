@@ -70,18 +70,22 @@ All outputs can be found in the Prediction.md file. It contains the following in
 
 
 ## Citation
-
 ```
-@software{mldice,
-  author       = {Kulathuvayal Arjun S., Su Yanqing },
-  title        = {{Elemental Diffusion Coefficient Prediction in Conventional Alloys using Machine Learning}},
-  month        = june,
-  year         = 2024,
-  publisher    = {--},
-  version      = {v0.0.1},
-  doi          = {--},
-  url          = {--}
+@article{mldice,
+    author = {Kulathuvayal, Arjun S. and Rao, Yi and Su, Yanqing},
+    title = "{Elemental diffusion coefficient prediction in conventional alloys using machine learning}",
+    journal = {Chemical Physics Reviews},
+    volume = {5},
+    number = {4},
+    pages = {041402},
+    year = {2024},
+    month = {10},
+    issn = {2688-4070},
+    doi = {10.1063/5.0222001},
+    url = {https://doi.org/10.1063/5.0222001},
+    eprint = {https://pubs.aip.org/aip/cpr/article-pdf/doi/10.1063/5.0222001/20208332/041402\_1\_5.0222001.pdf},
 }
+
 ```
 
 ### Under development
