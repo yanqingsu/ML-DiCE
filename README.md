@@ -5,7 +5,7 @@ ML-DiCE | Machine Learned Diffusion Coefficient Estimator
 </h1>
 <br>
 
-[![DOI]([https://zenodo.org/badge/DOI/update_soon.svg](https://doi.org/10.1063/5.0222001))]
+[![DOI](https://zenodo.org/badge/DOI/10.1063/5.0222001)](https://doi.org/10.1063/5.0222001)
 [![PyPI](https://img.shields.io/pypi/v/mldice/0.2.0)](https://pypi.org/project/mldice/)
 
 ## Installation
